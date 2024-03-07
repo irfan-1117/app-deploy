@@ -3,6 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: url-shortener
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -24,14 +25,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: url-shortener-service
+    name: url-shortener-service
 spec:
-  selector:
-    app: url-shortener
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9090
-  type: NodePort
+    type: NodePort
+    selector:
+        app: url-shortener
+    ports:
+        - port: 9090
+          targetPort: 9090
 
 
