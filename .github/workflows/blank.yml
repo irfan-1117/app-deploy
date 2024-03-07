@@ -27,7 +27,7 @@ jobs:
     - name: Test service URLs
       run: |
         minikube service list
-        minikube service short-url-service --url
+        minikube service url-shortener-service --url
 
     
     
