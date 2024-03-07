@@ -26,4 +26,4 @@ jobs:
         minikube service list
         minikube service url-shortener-service --url
         echo "------------------opening the service------------------"
-        curl $(minikube service url-shortener-service --url)        
+        curl $(minikube service url-shortener-service --url)       
