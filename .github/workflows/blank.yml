@@ -27,6 +27,9 @@ jobs:
     - name: Test service URLs
       run: |
         minikube service list
-        minikube service url-shortener-service
+        minikube short-url-service --url
+        echo "------------------opening the service------------------"
+        curl $(minikube short-url-service --url)    
+    
     
      
