@@ -1,5 +1,6 @@
-apiVersion: apps/v1
+---
 kind: Deployment
+apiVersion: apps/v1
 metadata:
   name: url-shortener
 spec:
@@ -14,9 +15,7 @@ spec:
     spec:
       containers:
       - name: url-shortener-container
-        image: ghcr.io/irfan-1117/url-shortener:v1
-      imagePullSecrets:
-      - name: my-docker-registry-secret  # Name of the secret
+        image: ghcr.io/irfan-1117/url-shortener:v1 # Name of the secret
         ports:
         - containerPort: 9090
 
