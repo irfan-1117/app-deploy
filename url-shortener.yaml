@@ -13,15 +13,14 @@ spec:
         app: url-shortener
     spec:
       containers:
-        - name: url-shortener-container
-          image: ghcr.io/irfan-1117/url-shortener:v1
+      - name: url-shortener-container
+        image: 
       imagePullSecrets:
-        - name: my-docker-registry-secret    
-          ports:
-            - containerPort: 9090
+      - name: my-docker-registry-secret  # Name of the secret
+        ports:
+        - containerPort: 9090
 
---- 
-
+---  
 apiVersion: v1
 kind: Service
 metadata:
@@ -34,3 +33,5 @@ spec:
       port: 80
       targetPort: 9090
   type: NodePort
+
+
