@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: url-shortener-container
-        image: 
+        image: ghcr.io/irfan-1117/url-shortener:v1
       imagePullSecrets:
       - name: my-docker-registry-secret  # Name of the secret
         ports:
